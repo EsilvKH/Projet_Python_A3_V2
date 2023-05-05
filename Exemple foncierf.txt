@@ -1,0 +1,109 @@
+Identifiant de document|	inutile
+Reference document|		inutile
+1 Articles CGI|			inutile
+2 Articles CGI|			inutile
+3 Articles CGI|			inutile
+4 Articles CGI			inutile
+|5 Articles CGI|			inutile
+No disposition|			inutile
+Date mutation|			crucial
+Nature mutation|			crucial
+Valeur fonciere|			crucial
+No voie|B/T/Q|			crucial
+Type de voie|			crucial		donne l'adresse
+Code voie|				crucial		donne l'adresse
+Voie|					crucial
+Code postal|			redondant
+Commune|				crucial		donne l'adresse
+Code departement|			crucial		
+Code commune|			inutile		je n'ai pas la référence
+Prefixe de section|		inutile		je n'ai pas la référence
+Section|				inutile		je n'ai pas la référence
+No plan|				inutile		je n'ai pas la référence
+No Volume|				inutile		je n'ai pas la référence
+1er lot|				crucial
+Surface Carrez du 1er lot|	crucial
+2eme lot|
+Surface Carrez du 2eme lot|
+3eme lot|
+Surface Carrez du 3eme lot|
+4eme lot|
+Surface Carrez du 4eme lot|
+5eme lot|
+Surface Carrez du 5eme lot|
+Nombre de lots|			crucial
+Code type local|			crucial
+Type local|				crucial
+Identifiant local|		inutile
+Surface reelle bati|		crucial
+Nombre pieces principales|	crucial
+Nature culture|			crucial
+Nature culture speciale|	crucial
+Surface terrain			crucial
+
+
+To do list :
+Epurer la base :
+	- Enlever les colonnes							X
+	- Valeur NaN
+Affecter les régions								X
+Trier selon les régions
+Associer chaque commune, département, région (emplacement)		X
+Lister le nombre total des valeurs prises par Nature Culture/Culture Spéciale		
+
+Quel nombre de lots moyen ?	Si 0 lot, supprimer
+Combien de propriétés entières (dataframe - valeurs avec des lots)					
+Selon les régions, quel est le plus grand nombre de mutation ?
+Quel type de mutation selon les régions ?
+Prix moyen au m² par région / département / Commune
+Quels type de local, global etc
+Prix moyen par type de local par région/département
+Comparaison entre types
+différence entre ville => comparaison entre 75 etc sur prix, surface, type
+
+
+
+
+Methodes :
+sorting : trier selon régions puis département etc etc => plus hautes valeurs ?
+Calculs de pourcentages selon des valeurs textuelles ex : (camembert des régions)
+
+
+
+Identifiant de document : numéro d'identification unique du document foncier.
+Référence document : référence de la formalité qui a permis la mise à jour du document foncier.
+1 à 5 Articles CGI : numéros des articles du Code Général des Impôts qui régissent les modalités d'imposition des mutations immobilières.
+No disposition : numéro d'ordre de la mutation immobilière dans le document foncier.
+Date mutation : date de la mutation immobilière, c'est-à-dire de la vente du bien immobilier.
+Nature mutation : type de mutation immobilière, par exemple vente, donation, échange, etc.
+Valeur foncière : montant de la transaction immobilière exprimé en euros.
+No voie : numéro de la voie (rue, avenue, etc.) où se situe le bien immobilier.
+B/T/Q : abréviation indiquant si le bien immobilier est un bâtiment (B), une tour (T) ou un quai (Q).
+Type de voie : type de voie (rue, avenue, etc.) où se situe le bien immobilier.
+Code voie : code de la voie où se situe le bien immobilier.
+Voie : nom de la voie où se situe le bien immobilier.
+Code postal : code postal de la commune où se situe le bien immobilier.
+Commune : nom de la commune où se situe le bien immobilier.
+Code département : code du département où se situe le bien immobilier.
+Code commune : code de la commune où se situe le bien immobilier.
+Préfixe de section : lettre qui précède le numéro de la section cadastrale où se situe le bien immobilier.
+Section : numéro de la section cadastrale où se situe le bien immobilier.
+No plan : numéro du plan cadastral où se situe le bien immobilier.
+No Volume : numéro du volume du plan cadastral où se situe le bien immobilier.
+1er à 5ème lot : numéro et superficie des lots de terrain vendus dans la transaction immobilière.
+Surface Carrez du 1er à 5ème lot : superficie des lots de terrain vendus dans la transaction immobilière calculée selon la loi Carrez.
+Nombre de lots : nombre total de lots vendus dans la transaction immobilière.
+Code type local : code de la catégorie du bien immobilier (appartement, maison, etc.).
+Type local : catégorie du bien immobilier (appartement, maison, etc.).
+Identifiant local : numéro d'identification unique du bien immobilier.
+Surface réelle bâtie : superficie construite du bien immobilier, exprimée en mètres carrés.
+Nombre de pièces principales : nombre de pièces principales du bien immobilier.
+Nature culture : type de culture pratiquée sur le terrain, par exemple céréales, vignes, pâturages, etc.
+Nature culture spéciale : type de culture spéciale pratiquée sur le terrain, par exemple vergers, pépinières, etc.
+Surface terrain : superficie totale du terrain vendu dans la transaction immobilière, exprimée en mètres carrés.
+
+
+|||||||000001|04/01/2018|Vente|239300,00|4||RUE|0025|DE LA BARMETTE|1250|NIVIGNE ET SURAN|01|95||AH|186||||||||||||0|1|Maison||163|4|S||949
+|||||||000001|04/01/2018|Vente|239300,00|4||RUE|0025|DE LA BARMETTE|1250|NIVIGNE ET SURAN|01|95||AH|186||||||||||||0|1|Maison||163|4|AG|JARD|420
+|||||||000001|04/01/2018|Vente|239300,00|4||RUE|0025|DE LA BARMETTE|1250|NIVIGNE ET SURAN|01|95||AH|186||||||||||||0|1|Maison||51|2|AG|JARD|420
+|||||||000001|04/01/2018|Vente|239300,00|4||RUE|0025|DE LA BARMETTE|1250|NIVIGNE ET SURAN|01|95||AH|186||||||||||||0|1|Maison||51|2|S||949
