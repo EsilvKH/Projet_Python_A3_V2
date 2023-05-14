@@ -115,10 +115,8 @@ for i in range(len(dataframe2018["Code departement"])):
             dataframe2018["Region"][i] = j
             break
 print(dataframe2018["Region"])
-del fr_departments
-del i
-del valeurdepartement
-del j
+del fr_departments, i, valeurdepartement,j
+
 #%% Séparez les lots uniques des lots multipes
 
 dataframe2018_multi_lots = dataframe2018[dataframe2018['Nombre de lots'] >= 1]
@@ -267,10 +265,18 @@ dataframe2018['Date mutation'] = pd.to_datetime(dataframe2018['Date mutation'])
 
 
 #%% Fonctions python 
-#
-#
-#
-#
+# filtre par date
+# filtre par valeur d'une région
+# filtre par valeur d'un département
+# filtre par valeur d'une commune
+# filtre par maximum et minimum de prix
+# filtre par maximum et minimum de surface
+# Ordonnancement des ventes par prix croisant ou décroissant du m²
+
+#A faire
+#Analyse des transactions immobilières par type de bien et par région
+#Analyse des transactions immobilières par type de bien et par département
+
 
 #%% Selection par dates
 
@@ -312,6 +318,17 @@ def prix_selon_param(dataframe, colonne, value, ascend):
         
     #return df_filtre[['Prix metre carre','Commune','Code departement','Region','Type local','Nature culture', colonne]]
     return df_filtre
+
+#%% Tranche de prix
+
+def tranches_de_param(dataframe,colonne,valeur_sup,valeur_inf=None):
+    if(valeur_inf != None):
+        mask = (dataframe[colonne]>= valeur_inf) & (dataframe[colonne]<= valeur_sup)
+    else:
+        mask = (dataframe[colonne]>= valeur_inf)
+    dataframe_filtre = dataframe.loc[mask]
+    return dataframe_filtre
+
 
 #%% tri d'une dataframe 
 
@@ -410,6 +427,8 @@ def histo_dataframe(dataframe):
 
 #Execution 
 histo_dataframe(df_demande)
+
+
 
 #%% Nombre de ventes par région
 
