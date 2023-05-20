@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graphique</title>
+</head>
+<body>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+        <div class="graph-container">
+    <img src="{% static 'graph.png' %}" alt="Graph" />
+</div>
+</form>
+</body>
+</html>
